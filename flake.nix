@@ -12,7 +12,7 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    u-boot-secure.url = "github:Nanamiiiii/u-boot-secure";
+    u-boot-secure.url = "github:apal-wucse/u-boot-secure";
   };
 
   outputs =
