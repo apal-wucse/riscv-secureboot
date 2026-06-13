@@ -15,7 +15,7 @@ All artifacts will be located under `result/`.
 ## Bootloader & Firmware
 
 ### U-Boot
-Source and additional information are located [here](https://github.com/Nanamiiiii/u-boot-secure). 
+Source and additional information are located [here](https://github.com/apal-wucse/u-boot-secure). 
 
 In this repository, following command builds the all bootloader binaries.
 ```bash
@@ -27,7 +27,7 @@ nix build .#u-boot-secure.qemu-ubuntu
 
 Build manually:
 ```bash
-git clone --recursive https://github.com/Nanamiiiii/u-boot-secure.git
+git clone --recursive https://github.com/apal-wucse/u-boot-secure.git
 cd u-boot-secure
 CROSS_COMPILE=riscv64-unknown-linux-gnu- make qemu-riscv64_spl_sb_seq_defconfig
 CROSS_COMPILE=riscv64-unknown-linux-gnu- make
@@ -49,7 +49,7 @@ CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=generic make
 ```
 
 ## QEMU
-Source is located [here](https://github.com/Nanamiiiii/qemu-secureboot.git).
+Source is located [here](https://github.com/apal-wucse/qemu-secureboot.git).
 
 In this repository, all changes are provided as a [patch](../nix/patches/0002-feat-riscv-implement-secureboot-key-insertion.patch) to v10.2.2.
 ```bash
@@ -58,7 +58,7 @@ nix build .#qemu-secureboot-riscv64
 
 Build manually:
 ```bash
-git clone https://github.com/Nanamiiiii/qemu-secureboot.git
+git clone https://github.com/apal-wucse/qemu-secureboot.git
 cd qemu-secureboot
 ./configure --target-list=riscv64-softmmu
 make
